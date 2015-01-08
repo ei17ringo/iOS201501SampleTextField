@@ -24,4 +24,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tapReturn:(id)sender {
+    NSLog(@"Return");
+    
+    if ([self.myTextField.text isEqualToString:@""]) {
+        self.myLabel.text = @"文字を入力してください";
+    }else{
+        self.myLabel.text = self.myTextField.text;
+    }
+   
+    
+}
 @end
